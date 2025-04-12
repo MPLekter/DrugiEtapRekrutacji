@@ -1,4 +1,3 @@
-using UnityEngine;
 
 namespace AE
 {
@@ -7,8 +6,15 @@ namespace AE
     public class PlayerInteract : MonoBehaviour
     {
         public float distanceToInteractable = 5.0f;
-        public Vector3 draggingInteractablePosition = new Vector3(1.0f, 1.0f, 1.0f);
+        public Vector3 draggingInteractablePosition; // Defaults in Start()
         private GameObject currentInteractableInstance = null;
+        private GameObject originalInteractable = null;
+
+        void Start()
+        {
+            // Default draggingInteractablePosition to the current global position
+            draggingInteractablePosition = transform.position;
+        }
 
         void Update()
         {
@@ -23,21 +29,27 @@ namespace AE
                     Interactable interactableScript = hit.collider.GetComponent<Interactable>();
                     if (interactableScript != null)
                     {
-                        // Instantiate the interactable
-                        currentInteractableInstance = Instantiate(interactableScript.gameObject);
+                        // Store the original GameObject
+                        originalInteractable = interactableScript.gameObject;
 
-                        // Set the instantiated object as a child of the player's parent
-                        currentInteractableInstance.transform.SetParent(transform.parent);
+                        // Instantiate the interactable at the dragging position
+                        currentInteractableInstance = Instantiate(originalInteractable, draggingInteractablePosition, Quaternion.identity);
 
-                        // Set the local position for dragging
-                        currentInteractableInstance.transform.localPosition = draggingInteractablePosition;
+                        // Set the instantiated object as a child of this GameObject
+                        currentInteractableInstance.transform.SetParent(transform);
 
-                        // Disable its Rigidbody if it has one, to prevent physics interference during dragging
+                        // Set the local position for dragging (relative to this GameObject)
+                        currentInteractableInstance.transform.localPosition = Vector3.zero; // Attach at the origin
+
+                        // Disable its Rigidbody if it has one
                         Rigidbody rb = currentInteractableInstance.GetComponent<Rigidbody>();
                         if (rb != null)
                         {
                             rb.isKinematic = true;
                         }
+
+                        // Destroy the original GameObject
+                        Destroy(originalInteractable);
                     }
                 }
             }
@@ -45,15 +57,16 @@ namespace AE
             // Check if the left mouse button is held down and we have an interactable instance
             if (Input.GetMouseButton(0) && currentInteractableInstance != null)
             {
-                // Keep the interactable instance at the dragging position relative to the parent
-                currentInteractableInstance.transform.localPosition = draggingInteractablePosition;
+                // The instance moves along with this GameObject because it's a child
+                // We can optionally update its local position if needed for visual adjustments
+                currentInteractableInstance.transform.localPosition = Vector3.zero;
             }
 
             // Check for left mouse button up
             if (Input.GetMouseButtonUp(0) && currentInteractableInstance != null)
             {
-                // Unparent the interactable instance
-                currentInteractableInstance.transform.SetParent(transform.parent.parent);
+                // Unparent the interactable instance, making it a sibling in the scene
+                currentInteractableInstance.transform.SetParent(null);
 
                 // Re-enable its Rigidbody if it had one
                 Rigidbody rb = currentInteractableInstance.GetComponent<Rigidbody>();
@@ -62,8 +75,9 @@ namespace AE
                     rb.isKinematic = false;
                 }
 
-                // Reset the current interactable instance
+                // Reset the current interactable instance and original reference
                 currentInteractableInstance = null;
+                originalInteractable = null;
             }
         }
     }
