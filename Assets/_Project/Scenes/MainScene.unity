@@ -4835,7 +4835,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceToInteractable: 5
-  draggingInteractablePosition: {x: 1, y: 1, z: 1}
+  draggingInteractablePositionOffset: {x: 0, y: 0, z: 0}
+  swingFrequencySide: 0.75
+  swingAmplitudeSide: 0.75
+  swingFrequencyForward: 1.25
+  swingAmplitudeForward: 1.25
+  swingFrequencyUp: 1.25
+  swingAmplitudeUp: 1.25
 --- !u!1001 &555026483
 PrefabInstance:
   m_ObjectHideFlags: 0
