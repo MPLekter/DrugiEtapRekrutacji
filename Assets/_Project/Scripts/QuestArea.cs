@@ -4,17 +4,20 @@ namespace AE
 {
     using UnityEngine;
     using System.Linq;
+    using DG.Tweening;
 
     public class QuestArea : MonoBehaviour
     {
         public string[] CorrectQuestItems;
-       
+        public GameObject Door; // Assign the door GameObject in the Inspector
+
 
         void Start()
         {
             //Sanity check if there are QuestItems added
             foreach (string i in CorrectQuestItems)
                 Debug.Log(i);
+            QuestFinished(); //TODO: just for test, turn off!
         }
 
         private void OnTriggerEnter(Collider other)
@@ -55,8 +58,25 @@ namespace AE
 
         private void QuestFinished()
         {
-            Debug.Log("Quest Finished!");
-            // Add your quest completion logic here
+            
+            // Tween the door's rotation if the Door GameObject is assigned
+            if (Door != null)
+            {
+                //Door.transform.Rotate(new Vector3(0f, 107f, 0f), 3f); //doesnt seem to work
+                Debug.Log(Door.transform.rotation); //check before rotation
+                Door.transform.DORotate(new Vector3(0f, 107f, 0f), 3f, RotateMode.FastBeyond360)
+                    .SetEase(Ease.Linear); // Tween over 3 seconds with a linear ease curve
+                Debug.Log(Door.transform.rotation); //check after rotation
+                Debug.Log("Quest Finished, door opening");
+                
+
+            }
+            else
+            {
+                Debug.LogWarning("Quest Finished, but Door GameObject is not assigned. Cannot tween rotation.");
+            }
+
+            // Add any other quest completion logic here
         }
     }
 }

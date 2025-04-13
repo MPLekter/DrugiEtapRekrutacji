@@ -1521,6 +1521,26 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 421908, guid: 5aa30891913dc934fa50d8fc19f4fde3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 421908, guid: 5aa30891913dc934fa50d8fc19f4fde3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 421908, guid: 5aa30891913dc934fa50d8fc19f4fde3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 421908, guid: 5aa30891913dc934fa50d8fc19f4fde3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 421908, guid: 5aa30891913dc934fa50d8fc19f4fde3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5447,6 +5467,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 490458, guid: 59a2998e00da19c4a974d036e8f41503, type: 3}
   m_PrefabInstance: {fileID: 581313467}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &582409100 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 173666, guid: 5aa30891913dc934fa50d8fc19f4fde3, type: 3}
+  m_PrefabInstance: {fileID: 125847254}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &582884873
 PrefabInstance:
@@ -15134,6 +15159,7 @@ MonoBehaviour:
   - Skulls
   - Sword
   - CandleStand
+  Door: {fileID: 582409100}
 --- !u!1001 &1819142073
 PrefabInstance:
   m_ObjectHideFlags: 0
