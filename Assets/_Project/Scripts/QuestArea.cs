@@ -12,6 +12,7 @@ namespace AE
         public GameObject Door; // Assign the door GameObject in the Inspector
         public GameObject NotificationWindow; //TODO: Get rid of this logic once TMPro is repaired
         public GameObject QuestNotificationWindow; //TODO: Get rid of this logic once TMPro is repaired
+        public Light DoorOpenedLight;
         private bool isQuestFinished = false;
 
         void Start()
@@ -78,6 +79,7 @@ namespace AE
                 Door.transform.DORotate(new Vector3(0f, 107f, 0f), 3f, RotateMode.LocalAxisAdd)
                     .SetEase(Ease.Linear); // Tween over 3 seconds with a linear ease curve
                 //Debug.Log(Door.transform.rotation); //check after rotation
+                DoorOpenedLight.enabled = true;
                 Debug.Log("Quest Finished, door opening");
                 
 
