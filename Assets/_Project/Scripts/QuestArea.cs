@@ -13,6 +13,8 @@ namespace AE
         public GameObject NotificationWindow; //TODO: Get rid of this logic once TMPro is repaired
         public GameObject QuestNotificationWindow; //TODO: Get rid of this logic once TMPro is repaired
         public Light DoorOpenedLight;
+        public AudioSource audioSource;
+        public AudioClip eatingSound;
         private bool isQuestFinished = false;
 
         void Start()
@@ -50,6 +52,10 @@ namespace AE
 
                     // Destroy the QuestItem that was placed
                     Destroy(other.gameObject);
+
+                    // Play nasty eating sound
+                    audioSource.clip = eatingSound;
+                    audioSource.Play();
 
                     // Check if all quest items have been collected
                     if (CorrectQuestItems.Length == 0)
