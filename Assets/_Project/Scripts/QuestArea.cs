@@ -14,6 +14,7 @@ namespace AE
 
         void Start()
         {
+            DOTween.Init();
             //Sanity check if there are QuestItems added
             foreach (string i in CorrectQuestItems)
                 Debug.Log(i);
@@ -64,7 +65,7 @@ namespace AE
             {
                 //Door.transform.Rotate(new Vector3(0f, 107f, 0f), 3f); //doesnt seem to work
                 Debug.Log(Door.transform.rotation); //check before rotation
-                Door.transform.DORotate(new Vector3(0f, 107f, 0f), 3f, RotateMode.FastBeyond360)
+                Door.transform.DORotate(new Vector3(0f, 107f, 0f), 3f, RotateMode.LocalAxisAdd)
                     .SetEase(Ease.Linear); // Tween over 3 seconds with a linear ease curve
                 Debug.Log(Door.transform.rotation); //check after rotation
                 Debug.Log("Quest Finished, door opening");
