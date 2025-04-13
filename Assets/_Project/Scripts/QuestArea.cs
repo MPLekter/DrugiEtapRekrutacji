@@ -18,7 +18,7 @@ namespace AE
             //Sanity check if there are QuestItems added
             foreach (string i in CorrectQuestItems)
                 Debug.Log(i);
-            QuestFinished(); //TODO: just for test, turn off!
+            //QuestFinished(); //TODO: just for test, turn off!
         }
 
         private void OnTriggerEnter(Collider other)
@@ -63,7 +63,7 @@ namespace AE
             // Tween the door's rotation if the Door GameObject is assigned
             if (Door != null)
             {
-                //Door.transform.Rotate(new Vector3(0f, 107f, 0f), 3f); //doesnt seem to work
+                
                 Debug.Log(Door.transform.rotation); //check before rotation
                 Door.transform.DORotate(new Vector3(0f, 107f, 0f), 3f, RotateMode.LocalAxisAdd)
                     .SetEase(Ease.Linear); // Tween over 3 seconds with a linear ease curve
