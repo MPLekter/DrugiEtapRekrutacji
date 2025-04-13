@@ -4,6 +4,7 @@ namespace AE
 {
     public class QuestItem : MonoBehaviour
     {
+        public string QuestItemName = "";
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
         {

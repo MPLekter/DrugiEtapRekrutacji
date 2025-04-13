@@ -2756,6 +2756,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30dda50d5a65f14398cf2bc96d5b251, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &275601919
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 275601920}
+  m_Layer: 0
+  m_Name: Test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &275601920
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275601919}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1897093672}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &276799179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6465,6 +6497,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 180826, guid: 42a24dc5c17bd814493040c2774660ba, type: 3}
       insertIndex: -1
       addedObject: {fileID: 740104657}
+    - targetCorrespondingSourceObject: {fileID: 180826, guid: 42a24dc5c17bd814493040c2774660ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 740104662}
   m_SourcePrefab: {fileID: 100100000, guid: 42a24dc5c17bd814493040c2774660ba, type: 3}
 --- !u!4 &740104655 stripped
 Transform:
@@ -6500,6 +6535,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc25686b6148ede40962f9aee6df460f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QuestItemName: Skulls
+--- !u!54 &740104662
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 740104656}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &742511947
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10029,6 +10092,10 @@ PrefabInstance:
       propertyPath: m_CastShadows
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 64969198248614070, guid: 905f5d361cad193469ae394765266d9a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10039,6 +10106,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 198924, guid: 905f5d361cad193469ae394765266d9a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1173857607}
+    - targetCorrespondingSourceObject: {fileID: 198924, guid: 905f5d361cad193469ae394765266d9a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1173857612}
   m_SourcePrefab: {fileID: 100100000, guid: 905f5d361cad193469ae394765266d9a, type: 3}
 --- !u!4 &1173857604 stripped
 Transform:
@@ -10074,6 +10144,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc25686b6148ede40962f9aee6df460f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QuestItemName: CandleStand
+--- !u!54 &1173857612
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173857605}
+  serializedVersion: 4
+  m_Mass: 0.1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1175064751
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13010,7 +13108,16 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 180826, guid: 42a24dc5c17bd814493040c2774660ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1857096509}
+    - targetCorrespondingSourceObject: {fileID: 180826, guid: 42a24dc5c17bd814493040c2774660ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1857096508}
+    - targetCorrespondingSourceObject: {fileID: 180826, guid: 42a24dc5c17bd814493040c2774660ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1857096507}
   m_SourcePrefab: {fileID: 100100000, guid: 42a24dc5c17bd814493040c2774660ba, type: 3}
 --- !u!4 &1513792334 stripped
 Transform:
@@ -14428,6 +14535,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.1603643
       objectReference: {fileID: 0}
+    - target: {fileID: 64081055339493018, guid: a9801b496c0b22542bd354dbd33e894d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14438,6 +14549,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 101020, guid: a9801b496c0b22542bd354dbd33e894d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1769689856}
+    - targetCorrespondingSourceObject: {fileID: 101020, guid: a9801b496c0b22542bd354dbd33e894d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1769689860}
   m_SourcePrefab: {fileID: 100100000, guid: a9801b496c0b22542bd354dbd33e894d, type: 3}
 --- !u!4 &1769689853 stripped
 Transform:
@@ -14473,6 +14587,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc25686b6148ede40962f9aee6df460f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QuestItemName: Sword
+--- !u!54 &1769689860
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769689854}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1771092805
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14879,8 +15021,9 @@ GameObject:
   - component: {fileID: 1814136053}
   - component: {fileID: 1814136052}
   - component: {fileID: 1814136051}
+  - component: {fileID: 1814136054}
   m_Layer: 0
-  m_Name: QuestInteractionArea
+  m_Name: QuestArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14895,7 +15038,7 @@ Transform:
   m_GameObject: {fileID: 1814136049}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.63}
   m_LocalScale: {x: 3, y: 4, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14916,12 +15059,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.0812266, y: 1.0950398, z: 1.2026649}
+  m_Center: {x: 0.05356163, y: 0.11181033, z: 0.27669317}
 --- !u!23 &1814136052
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14975,6 +15118,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814136049}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1814136054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814136049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27ad33bd8cb323346b5275533c4a0e41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CorrectQuestItems:
+  - Skulls
+  - Sword
+  - CandleStand
 --- !u!1001 &1819142073
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15423,6 +15582,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 156554, guid: 78e62412f73e94b49b918c80ac4bce03, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1847656964}
+    - targetCorrespondingSourceObject: {fileID: 156554, guid: 78e62412f73e94b49b918c80ac4bce03, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1847656970}
   m_SourcePrefab: {fileID: 100100000, guid: 78e62412f73e94b49b918c80ac4bce03, type: 3}
 --- !u!4 &1847656962 stripped
 Transform:
@@ -15458,6 +15620,91 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc25686b6148ede40962f9aee6df460f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QuestItemName: CandleStand
+--- !u!54 &1847656970
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1847656963}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!1 &1857096503 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 180826, guid: 42a24dc5c17bd814493040c2774660ba, type: 3}
+  m_PrefabInstance: {fileID: 1513792333}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1857096507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857096503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e30dda50d5a65f14398cf2bc96d5b251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1857096508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857096503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc25686b6148ede40962f9aee6df460f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuestItemName: Skulls
+--- !u!54 &1857096509
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1857096503}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1859714055
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15949,6 +16196,130 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 454800, guid: e3722a3c340f7334ba1c2605218cbbb7, type: 3}
   m_PrefabInstance: {fileID: 1895780232}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1897093671
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 275601920}
+    m_Modifications:
+    - target: {fileID: 101020, guid: a9801b496c0b22542bd354dbd33e894d, type: 3}
+      propertyPath: m_Name
+      value: SD_Prop_Sword_Rusty_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 441350, guid: a9801b496c0b22542bd354dbd33e894d, type: 3}
+      propertyPath: m_RootOrder
+      value: 74
+      objectReference: {fileID: 0}
+    - target: {fileID: 441350, guid: a9801b496c0b22542bd354dbd33e894d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 441350, guid: a9801b496c0b22542bd354dbd33e894d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 441350, guid: a9801b496c0b22542bd354dbd33e894d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 441350, guid: a9801b496c0b22542bd354dbd33e894d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.98341364
+      objectReference: {fileID: 0}
+    - target: {fileID: 441350, guid: a9801b496c0b22542bd354dbd33e894d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000024214387
+      objectReference: {fileID: 0}
+    - target: {fileID: 441350, guid: a9801b496c0b22542bd354dbd33e894d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.18137738
+      objectReference: {fileID: 0}
+    - target: {fileID: 441350, guid: a9801b496c0b22542bd354dbd33e894d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 64081055339493018, guid: a9801b496c0b22542bd354dbd33e894d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 101020, guid: a9801b496c0b22542bd354dbd33e894d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1897093675}
+    - targetCorrespondingSourceObject: {fileID: 101020, guid: a9801b496c0b22542bd354dbd33e894d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1897093674}
+    - targetCorrespondingSourceObject: {fileID: 101020, guid: a9801b496c0b22542bd354dbd33e894d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1897093679}
+  m_SourcePrefab: {fileID: 100100000, guid: a9801b496c0b22542bd354dbd33e894d, type: 3}
+--- !u!4 &1897093672 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 441350, guid: a9801b496c0b22542bd354dbd33e894d, type: 3}
+  m_PrefabInstance: {fileID: 1897093671}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1897093673 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 101020, guid: a9801b496c0b22542bd354dbd33e894d, type: 3}
+  m_PrefabInstance: {fileID: 1897093671}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1897093674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897093673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc25686b6148ede40962f9aee6df460f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  QuestItemName: Sword
+--- !u!114 &1897093675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897093673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e30dda50d5a65f14398cf2bc96d5b251, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!54 &1897093679
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1897093673}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &1908702730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18694,3 +19065,4 @@ SceneRoots:
   - {fileID: 1980796147}
   - {fileID: 1757429352}
   - {fileID: 546581821}
+  - {fileID: 275601920}
