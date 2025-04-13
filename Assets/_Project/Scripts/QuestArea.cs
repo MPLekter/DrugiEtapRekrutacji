@@ -10,7 +10,9 @@ namespace AE
     {
         public string[] CorrectQuestItems;
         public GameObject Door; // Assign the door GameObject in the Inspector
-
+        public GameObject NotificationWindow; //TODO: Get rid of this logic once TMPro is repaired
+        public GameObject QuestNotificationWindow; //TODO: Get rid of this logic once TMPro is repaired
+        private bool isQuestFinished = false;
 
         void Start()
         {
@@ -25,6 +27,11 @@ namespace AE
         {
             Debug.Log($"Collider {other} entered ");
             QuestItem questItem = other.GetComponent<QuestItem>();
+            if (isQuestFinished == false)
+            {
+            QuestNotificationWindow.SetActive(true);
+            NotificationWindow.SetActive(false);
+            }
             if (questItem != null)
             {
                 string itemName = questItem.QuestItemName;
@@ -59,15 +66,18 @@ namespace AE
 
         private void QuestFinished()
         {
-            
+            isQuestFinished = true;
             // Tween the door's rotation if the Door GameObject is assigned
             if (Door != null)
             {
-                
-                Debug.Log(Door.transform.rotation); //check before rotation
+                QuestNotificationWindow.SetActive(false);
+                //TODO: Add sound
+                //TODO: Add some light to the door?
+
+                //Debug.Log(Door.transform.rotation); //check before rotation
                 Door.transform.DORotate(new Vector3(0f, 107f, 0f), 3f, RotateMode.LocalAxisAdd)
                     .SetEase(Ease.Linear); // Tween over 3 seconds with a linear ease curve
-                Debug.Log(Door.transform.rotation); //check after rotation
+                //Debug.Log(Door.transform.rotation); //check after rotation
                 Debug.Log("Quest Finished, door opening");
                 
 
